@@ -42,6 +42,7 @@ public class PatternTest {
         assertMatches("abc", "*?c");
         assertMatches("abc", "*???");
         assertDoesNotMatch("abc", "*????");
+        assertDoesNotMatch("abc", "abc*?");
     }
 
     private void assertMatches(String input, String patternString) {
